@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "patterns"
+version = "0.1.0"
+description = "Implementation of patterns from 'Design Patterns. Elements of reusable object-oriented software'"
+authors = ["Kirill Frolov <ffrolov.kirill@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
