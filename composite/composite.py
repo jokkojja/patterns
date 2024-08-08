@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+from typing import TypeAlias
+
+Role: TypeAlias = str
 
 # Component
 class Employee(ABC):
@@ -29,7 +32,7 @@ class Developer(Employee):
     def __init__(self, name: str, salary: float):
         self.__name = name
         self.__salary = salary
-        self.__roles = []
+        self.__roles: list[Role] = []
 
     @property
     def name(self) -> str:
@@ -47,7 +50,7 @@ class Developer(Employee):
     def roles(self) -> list:
         return self.__roles
 
-    def add_role(self, role: str):
+    def add_role(self, role: Role):
         self.__roles.append(role)
 
 
@@ -76,7 +79,7 @@ class Designer(Employee):
     def roles(self) -> list:
         return self.__roles
 
-    def add_role(self, role: str):
+    def add_role(self, role: Role):
         self.__roles.append(role)
 
 # Composite
