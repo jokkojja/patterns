@@ -47,7 +47,7 @@ class Developer(Employee):
         self.__salary = salary
 
     @property
-    def roles(self) -> list:
+    def roles(self) -> list[Role]:
         return self.__roles
 
     def add_role(self, role: Role):
@@ -61,7 +61,7 @@ class Designer(Employee):
     def __init__(self, name: str, salary: float):
         self.__name = name
         self.__salary = salary
-        self.__roles = []
+        self.__roles: list[Role] = []
 
     @property
     def name(self) -> str:
@@ -76,7 +76,7 @@ class Designer(Employee):
         self.__salary = salary
 
     @property
-    def roles(self) -> list:
+    def roles(self) -> list[Role]:
         return self.__roles
 
     def add_role(self, role: Role):
